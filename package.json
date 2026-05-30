@@ -2,7 +2,7 @@
   "name": "chess-clone",
   "version": "1.0.0",
   "description": "Chess.com registration page clone",
-  "scripts": {
-    "start": "npx serve ."
-  }
+"scripts": {
+  "start": "node server.js"
+}
 }
