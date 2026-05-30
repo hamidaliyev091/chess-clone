@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess.com - Create Account</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♟</text></svg>">
+</head>
+<body>
+  <!-- Page 1: Create Account -->
+  <div id="page-create" class="page active">
+    <header class="header">
+      <div class="logo">
+        <svg class="logo-icon" viewBox="0 0 28 28" width="28" height="28">
+          <path d="M14 3c-1.5 0-2.7 1.2-2.7 2.7 0 .8.3 1.5.9 2-.4.3-.7.7-.9 1.2h-.6c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5h.3c-.1.3-.1.6-.1.9 0 .5.1 1 .3 1.4l-3.4 3.4c-.3.3-.3.8 0 1.1l1.1 1.1c.3.3.8.3 1.1 0L13.3 16c.2.1.5.1.7.1s.5 0 .7-.1l3.4 3.4c.3.3.8.3 1.1 0l1.1-1.1c.3-.3.3-.8 0-1.1l-3.4-3.4c.2-.4.3-.9.3-1.4 0-.3 0-.6-.1-.9h.3c.8 0 1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5h-.6c-.2-.5-.5-.9-.9-1.2.5-.5.9-1.2.9-2C16.7 4.2 15.5 3 14 3z" fill="#81b64c"/>
+          <path d="M6 22h16v3H6z" fill="#81b64c"/>
+        </svg>
+        <span class="logo-text">Chess<span class="logo-dot">.com</span></span>
+      </div>
+      <a href="#" class="login-link">Log In</a>
+    </header>
+
+    <main class="main-content">
+      <h1 class="title">Create Your Chess.com<br>Account</h1>
+      
+      <div class="pawn-container">
+        <div class="pawn-shadow"></div>
+        <svg class="pawn-piece" viewBox="0 0 100 120" width="100" height="120">
+          <ellipse cx="50" cy="110" rx="35" ry="8" fill="rgba(0,0,0,0.3)"/>
+          <path d="M50 15c-8 0-14 6-14 14 0 4 2 8 5 10-3 2-5 5-5 9 0 2 0 4 1 5l-5 0c-3 0-5 2-5 5s2 5 5 5l2 0c-1 2-1 4-1 6 0 4 1 7 3 10L25 90c-1 1-1 3 0 4l3 3c1 1 3 1 4 0l11-11c2 1 4 2 7 2s5-1 7-2l11 11c1 1 3 1 4 0l3-3c1-1 1-3 0-4L64 79c2-3 3-6 3-10 0-2 0-4-1-6l2 0c3 0 5-2 5-5s-2-5-5-5l-5 0c0-1 1-3 1-5 0-4-2-7-5-9 3-2 5-6 5-10 0-8-6-14-14-14z" fill="#81b64c"/>
+          <path d="M30 100h40v8c0 2-2 4-4 4H34c-2 0-4-2-4-4v-8z" fill="#81b64c"/>
+        </svg>
+      </div>
+
+      <div class="buttons-container">
+        <button class="btn btn-primary" id="btn-email">
+          Continue with Email
+        </button>
+        
+        <div class="divider">
+          <span>OR</span>
+        </div>
+
+        <button class="btn btn-secondary" id="btn-google">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+          Continue with Google
+        </button>
+
+        <button class="btn btn-secondary" id="btn-apple">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" fill="white">
+            <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+          </svg>
+          Continue with Apple
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Page 2: Email & Password -->
+  <div id="page-email" class="page">
+    <header class="header">
+      <button class="back-btn" id="btn-back">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+      </button>
+      <div class="logo logo-center">
+        <svg class="logo-icon" viewBox="0 0 28 28" width="28" height="28">
+          <path d="M14 3c-1.5 0-2.7 1.2-2.7 2.7 0 .8.3 1.5.9 2-.4.3-.7.7-.9 1.2h-.6c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5h.3c-.1.3-.1.6-.1.9 0 .5.1 1 .3 1.4l-3.4 3.4c-.3.3-.3.8 0 1.1l1.1 1.1c.3.3.8.3 1.1 0L13.3 16c.2.1.5.1.7.1s.5 0 .7-.1l3.4 3.4c.3.3.8.3 1.1 0l1.1-1.1c.3-.3.3-.8 0-1.1l-3.4-3.4c.2-.4.3-.9.3-1.4 0-.3 0-.6-.1-.9h.3c.8 0 1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5h-.6c-.2-.5-.5-.9-.9-1.2.5-.5.9-1.2.9-2C16.7 4.2 15.5 3 14 3z" fill="#81b64c"/>
+          <path d="M6 22h16v3H6z" fill="#81b64c"/>
+        </svg>
+        <span class="logo-text">Chess<span class="logo-dot">.com</span></span>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <h1 class="title">Enter Your <span class="highlight">Email</span> and a<br>Password</h1>
+      <p class="subtitle">This allows you to log in on any device</p>
+
+      <div class="form-container">
+        <div class="input-group">
+          <svg class="input-icon" viewBox="0 0 24 24" width="20" height="20" fill="#999">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          <input type="email" id="email" placeholder="Email" autocomplete="email">
+        </div>
+
+        <div class="input-group">
+          <svg class="input-icon" viewBox="0 0 24 24" width="20" height="20" fill="#999">
+            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+          </svg>
+          <input type="password" id="password" placeholder="Password" autocomplete="new-password">
+          <button class="toggle-password" id="toggle-password" type="button">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#999">
+              <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+            </svg>
+          </button>
+        </div>
+
+        <button class="btn btn-primary" id="btn-continue">
+          Continue
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
